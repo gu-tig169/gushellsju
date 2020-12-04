@@ -44,7 +44,7 @@ class MyState extends ChangeNotifier {
   }
 
   void removeTask(TodoTasks task) async {
-    await Api.removeTasks(task.message);
+    await Api.removeTasks(task.id);
     await fetchList();
   }
 

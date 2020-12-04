@@ -3,13 +3,13 @@ import 'package:provider/provider.dart';
 import 'model.dart';
 
 class TodoList extends StatelessWidget {
-  final List<TodoTasks> list;
+  final List<TodoTasks> _task;
 
-  TodoList(this.list);
+  TodoList(this._task);
 
   Widget build(BuildContext context) {
     return ListView(
-        children: list.map((task) => _taskItem(context, task)).toList());
+        children: _task.map((task) => _taskItem(context, task)).toList());
   }
 
   Widget _taskItem(context, task) {

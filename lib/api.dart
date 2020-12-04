@@ -25,8 +25,8 @@ class Api {
     }).toList();
   }
 
-  static Future removeTasks(String taskMessage) async {
-    await http.delete('$API_URL/todos/$taskMessage?key=$API_KEY');
+  static Future removeTasks(String id) async {
+    await http.delete('$API_URL/todos/$id?key=$API_KEY');
     print('remove tasks');
   }
 
